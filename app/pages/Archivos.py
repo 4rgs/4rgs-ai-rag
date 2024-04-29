@@ -1,6 +1,6 @@
 import streamlit as st
 
-st.set_page_config(layout='wide', page_title='Archivos - Basdonax AI RAG', page_icon='📁')
+st.set_page_config(layout='wide', page_title='Archivos - 4rgs AI RAG', page_icon='📁')
 
 import chromadb, os
 from langchain_community.embeddings import HuggingFaceEmbeddings
@@ -12,7 +12,7 @@ from common.streamlit_style import hide_streamlit_style
 hide_streamlit_style()
 
 # Define the Chroma settings
-CHROMA_SETTINGS = chromadb.HttpClient(host="host.docker.internal", port = 8000, settings=Settings(allow_reset=True, anonymized_telemetry=False))
+CHROMA_SETTINGS = chromadb.HttpClient(host="localhost", port = 8000, settings=Settings(allow_reset=True, anonymized_telemetry=False))
 collection = CHROMA_SETTINGS.get_or_create_collection(name='vectordb')
 embeddings = HuggingFaceEmbeddings(model_name='all-MiniLM-L6-v2')
 

@@ -1,6 +1,6 @@
 import streamlit as st
 
-st.set_page_config(layout='wide', page_title='Inicio - Basdonax AI RAG', page_icon='⌨️')
+st.set_page_config(layout='wide', page_title='Inicio - 4rgs AI RAG', page_icon='⌨️')
 
 from common.langchain_module import response
 from common.streamlit_style import hide_streamlit_style
@@ -8,7 +8,7 @@ from common.streamlit_style import hide_streamlit_style
 hide_streamlit_style()
 
 # Título de la aplicación Streamlit
-st.title("Basdonax AI RAG")
+st.title("4rgs AI RAG")
 
 # Initialize chat history
 if "messages" not in st.session_state:

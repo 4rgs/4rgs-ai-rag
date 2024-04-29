@@ -43,7 +43,7 @@ def response(query:str) -> str:
     # activate/deactivate the streaming StdOut callback for LLMs
     callbacks = [] if args.mute_stream else [StreamingStdOutCallbackHandler()]
 
-    llm = Ollama(model=model, callbacks=callbacks, temperature=0, base_url='http://ollama:11434')
+    llm = Ollama(model=model, callbacks=callbacks, temperature=0, base_url='http://localhost:11434')
     
 
     prompt = assistant_prompt()
