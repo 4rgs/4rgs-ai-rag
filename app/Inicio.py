@@ -8,7 +8,7 @@ from common.streamlit_style import hide_streamlit_style
 hide_streamlit_style()
 
 # Título de la aplicación Streamlit
-st.title("4rgs AI RAG")
+st.title("Bienvenido a 4rgs's AI RAG 🤖📚🚀 con llama3:7b")
 
 # Initialize chat history
 if "messages" not in st.session_state:
@@ -20,7 +20,7 @@ for message in st.session_state.messages:
         st.markdown(message["content"])
 
 # React to user input
-if user_input := st.chat_input("Escribí tu mensaje 😎"):
+if user_input := st.chat_input("Escribe tu mensaje 😎"):
     # Display user message in chat message container
     with st.chat_message("user"):
         st.markdown(user_input)
